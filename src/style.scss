@@ -1,0 +1,371 @@
+@mixin backgroundImg {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-left: 31px;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../public/fonts/SFProDisplay-Medium.eot');
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+        url('../public/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../public/fonts/SFProDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../public/fonts/SFProDisplay-Semibold.eot');
+    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+        url('../public/fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('../public/fonts/SFProDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../public/fonts/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+        url('../public/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../public/fonts/SFProDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display';
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar {
+
+    position: absolute;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 20px 0 0 12px;
+    background-color: rgba(9, 19, 54, 1);
+
+    &__list_logo {
+        padding-bottom: 60px;
+    }
+
+    &__list_link {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__list_item {
+        font-family: 'SF Pro Display';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 32px;
+    }
+
+    &__list_item1 {
+        background-image: url(../public/img/bar-icon1.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item2 {
+        background-image: url(../public/img/bar-icon2.svg);
+        @include backgroundImg;
+        background-position: 0 4px;
+    }
+
+    &__list_item3 {
+        background-image: url(../public/img/bar-icon3.svg);
+        @include backgroundImg;
+        background-position: 0 4px;
+
+    }
+
+    &__list_item4 {
+        background-image: url(../public/img/bar-icon4.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item5 {
+        background-image: url(../public/img/bar-icon5.svg);
+        @include backgroundImg;
+        background-position: 0 4px;
+
+    }
+
+    &__list_item6 {
+        background-image: url(../public/img/bar-icon6.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item7 {
+        background-image: url(../public/img/bar-icon7.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item8 {
+        background-image: url(../public/img/bar-icon8.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item9 {
+        background-image: url(../public/img/bar-icon9.svg);
+        @include backgroundImg;
+    }
+
+    &__list_item10 {
+        background-image: url(../public/img/bar-icon10.svg);
+        @include backgroundImg;
+    }
+
+
+    &__btn {
+        width: 200px;
+        padding: 15px 50px 15px 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 148%;
+        background-color: rgba(0, 95, 248, 1);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    &__btn:hover {
+        background-color: rgba(0, 36, 203, 1)
+    }
+
+    &__btn:active {
+        background-color: rgba(39, 75, 200, 1);
+    }
+
+    &__btn:focus-visible {
+        outline: none;
+        background-color: rgba(0, 36, 203, 1);
+    }
+
+    &__btn:first-child {
+        margin-top: 70px;
+        margin-bottom: 32px;
+        background-image: url(../public/img/bar-btn1.svg);
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+    }
+
+    &__btn:last-child {
+        background-image: url(../public/img/bar-btn2.svg);
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+    }
+
+}
+
+.header {
+    margin-left: 320px;
+    display: flex;
+    align-items: end;
+    padding: 15px 0;
+
+    &__list {
+        display: flex;
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 148%;
+        color: rgba(137, 156, 177, 1);
+    }
+
+    &__result_text {
+        padding-bottom: 7px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 148%;
+        color: rgba(18, 41, 69, 1);
+    }
+
+    &__result_span {
+        color: rgba(0, 167, 117, 1);
+    }
+
+    &__result_span_calls {
+        color: rgba(0, 167, 117, 1);
+    }
+
+    &__result_span_quality {
+        color: rgba(255, 184, 0, 1);
+    }
+
+    &__result_span_order {
+        color: rgba(234, 26, 79, 1);
+    }
+
+    &__center {
+        position: relative;
+        margin-left: 86px;
+    }
+
+    &__range {
+        position: absolute;
+        display: block;
+        width: 156px;
+        height: 6px;
+        background-color: rgba(222, 230, 245, 1);
+        border-radius: 12px;
+    }
+
+    &__range_calls::after {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 50px;
+        height: 6px;
+        background-color: rgba(40, 168, 121, 1);
+        border-radius: 12px;
+    }
+
+    &__range_quality::after {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 50px;
+        height: 6px;
+        background-color: rgba(255, 184, 0, 1);
+        border-radius: 12px;
+    }
+
+    &__range_order::after {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 50px;
+        height: 6px;
+        background-color: rgba(234, 26, 79, 1);
+        border-radius: 12px;
+    }
+
+    &__list_item:not(:first-child) {
+        margin-left: 56px;
+    }
+
+    &__search {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        padding-left: 189px;
+    }
+
+    &__search:hover {}
+
+    &__right {
+        position: relative;
+        display: flex;
+        align-items: end;
+    }
+
+    &__agent {
+        font-weight: 400;
+        padding-left: 64px;
+        font-size: 15px;
+        line-height: 140%;
+        white-space: nowrap;
+        color: rgba(137, 156, 177, 1);
+    }
+
+    &__agent_span {
+        position: relative;
+    }
+
+    &__agent_span::after {
+        content: '';
+        position: absolute;
+        cursor: pointer;
+        top: -18px;
+        bottom: 0;
+        left: 12px;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2.5px solid rgba(173, 191, 223, .8);
+        border-left: 2.5px solid rgba(173, 191, 223, .8);
+        transform: rotate(-45deg);
+    }
+
+    &__agent_span:hover::after {
+        border-color: rgba(0, 44, 251, 1);
+        transition: all .2s ease;
+    }
+
+    &__agent_span:active::after {
+        border-color: rgba(0, 44, 251, 1);
+        transition: all .00001s ease;
+        transform: rotate(135deg);
+
+    }
+
+    &__avatar {
+        position: absolute;
+        right: -22%;
+        top: -55%;
+        margin-left: 50px;
+        width: 40px;
+        height: 40px;
+        background-image: url(../public/img/avatar.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__avatar_span {
+        position: relative;
+    }
+
+    &__avatar_span::after {
+        content: '';
+        position: absolute;
+        cursor: pointer;
+        top: 14px;
+        bottom: 0;
+        left: 54px;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2.5px solid rgba(173, 191, 223, .8);
+        border-left: 2.5px solid rgba(173, 191, 223, .8);
+        transform: rotate(-45deg);
+    }
+
+    &__avatar_span:hover::after {
+        border-color: rgba(0, 44, 251, 1);
+        transition: all .2s ease;
+    }
+
+    &__avatar_span:active::after {
+        border-color: rgba(0, 44, 251, 1);
+        transition: all .00001s ease;
+        transform: rotate(135deg);
+
+    }
+
+}
