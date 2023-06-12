@@ -276,7 +276,10 @@ a {
         padding-left: 189px;
     }
 
-    &__search:hover {}
+    &__search:hover path {
+        stroke: rgba(0, 44, 251, 1);
+        fill: rgba(0, 44, 251, 1);
+    }
 
     &__right {
         position: relative;
@@ -368,4 +371,98 @@ a {
 
     }
 
+}
+
+.main {
+    background-color: rgba(241, 244, 249, 1);
+
+    &__container {
+        padding-top: 20px;
+        max-width: 1725px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 48px;
+    margin-right: 50px;
+    padding: 10px 17px 9px 18px;
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 148%;
+        color: #899CB1;
+    }
+
+    &__sum {
+        font-weight: bold;
+        color: rgba(18, 41, 69, 1);
+
+    }
+
+    &__btn {
+        margin-left: 10px;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        background-image: url(../public/img/btn-sum.svg);
+    }
+}
+
+.calendar {
+    position: relative;
+
+    &__date {
+        padding: 0 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(0, 95, 248, 1);
+        background-image: url(../public/img/icon-calendar.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+    }
+
+    &__minus {
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: -23px;
+        top: 27%;
+        border-bottom: 2.5px solid rgba(173, 191, 223, 0.8);
+        border-left: 2.5px solid rgba(173, 191, 223, 0.8);
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    &__minus:hover {
+        border-color: rgba(0, 44, 251, 1);
+
+    }
+
+    &__plus {
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        right: -3px;
+        top: 27%;
+        border-bottom: 2.5px solid rgba(173, 191, 223, 0.8);
+        border-left: 2.5px solid rgba(173, 191, 223, 0.8);
+        transform: rotate(-135deg);
+        cursor: pointer;
+    }
+
+    &__plus:hover {
+        border-color: rgba(0, 44, 251, 1);
+
+    }
 }
