@@ -5,12 +5,15 @@ import Header from './components/Header';
 import Main from './components/Main';
 
 function App() {
+
   return (
-    <>
-      <Header />
-      <Main />
+    <div className="separator">
       <Sidebar />
-    </>
+      <div className="wrapper">
+        <Header />
+        <Main />
+      </div>
+    </div>
   );
 }
 

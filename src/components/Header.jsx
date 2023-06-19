@@ -1,10 +1,13 @@
 function Header() {
+    const months = ["янв", "фев", "март", "апр", "май", "июнь",
+        "июль", "авг", "сен", "окт", "ноя", "дек"];
+    const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    const myDate = new Date();
+
     return (
-        <header className="header">
+        <header className="page__content header">
             <div className="header__left">
-                <span className="header__date">Среда, 13 окт</span>
-            </div>
-            <div className="header__center">
+                <span className="header__date">{days[myDate.getDay()] + ',' + ' ' + myDate.getDate() + ' ' + months[myDate.getMonth()]}</span>
                 <ul className="header__list">
                     <li className="header__list_item"><p className="header__result_text">Новые звонки<span className="header__result_span header__result_span_calls"> 20 из 30 шт</span></p>
                         <span className="header__range header__range_calls"></span>
@@ -12,7 +15,7 @@ function Header() {
                     <li className="header__list_item"><p className="header__result_text">Качество разговоров<span className="header__result_span header__result_span_quality"> 40%</span></p>
                         <span className="header__range header__range_quality"></span>
                     </li>
-                    <li className="header__list_item"><p className="header__result_text">Новые звонки<span className="header__result_span header__result_span_order"> 67%</span></p>
+                    <li className="header__list_item"><p className="header__result_text">Конверсия в заказ<span className="header__result_span header__result_span_order"> 67%</span></p>
                         <span className="header__range header__range_order"></span>
                     </li>
                 </ul>
@@ -24,8 +27,9 @@ function Header() {
                 <p className="header__agent">ИП Сидорова Александра Михайловна</p>
                 <span className="header__agent_span"></span>
                 <div className="header__avatar">
-                <span className="header__avatar_span"></span>
                 </div>
+                <span className="header__avatar_span"></span>
+
             </div>
         </header>
     )
