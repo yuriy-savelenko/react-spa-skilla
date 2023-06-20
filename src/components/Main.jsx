@@ -119,9 +119,9 @@ function Main() {
                             {openCalls &&
                                 <div className={`calls__modal`}>
                                     <ul className='calls__modal_list'>
-                                        <li onClick={getCallsValue} data-value='all' className='calls__modal__list_item'>Все звонки</li>
-                                        <li onClick={getCallsValue} data-value='in' className='calls__modal__list_item'>Входящие</li>
-                                        <li onClick={getCallsValue} data-value='out' className='calls__modal__list_item'>Исходяшие</li>
+                                        <li onClick={getCallsValue} data-value='all' className={`calls__modal__list_item ${callsFilter === 'all' ? 'active-calls-filter' : ''}`}>Все звонки</li>
+                                        <li onClick={getCallsValue} data-value='in' className={`calls__modal__list_item ${callsFilter === 'in' ? 'active-calls-filter' : ''}`}>Входящие</li>
+                                        <li onClick={getCallsValue} data-value='out' className={`calls__modal__list_item ${callsFilter === 'out' ? 'active-calls-filter' : ''}`}>Исходяшие</li>
                                     </ul>
                                 </div>
                             }

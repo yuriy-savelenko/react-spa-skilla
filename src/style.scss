@@ -387,6 +387,7 @@ a {
     &__agent_span:active::after {
         border-color: rgba(0, 44, 251, 1);
         transition: all .00001s ease;
+        top: -11px;
         transform: rotate(135deg);
 
     }
@@ -660,6 +661,7 @@ a {
     &__input:hover {
         background-image: url(../public/img/search-active.svg);
         background-size: 16px 16px;
+
     }
 
     &__input:focus {
@@ -669,6 +671,9 @@ a {
         color: #122945;
     }
 
+    &__input:active {
+        outline-color: rgba(94, 119, 147);
+    }
 
     &__input::placeholder {
         color: rgba(94, 119, 147, .8);
@@ -762,6 +767,7 @@ a {
     &__list:hover {
         background: linear-gradient(45deg, rgba(212, 223, 243, 0) 0, rgba(212, 223, 243, 0.2) 10%, rgba(212, 223, 243, 0.2) 90%, rgba(212, 223, 243, 0) 100%)
     }
+
     &__list:active {
         background: linear-gradient(45deg, rgba(212, 223, 243, 0) 0, rgba(212, 223, 243, 0.5) 10%, rgba(212, 223, 243, 0.7) 90%, rgba(212, 223, 243, 0) 100%)
     }
@@ -870,7 +876,29 @@ a {
         position: absolute;
         top: 14%;
         right: 0%;
+        height: 48px;
+
     }
+
+    &__audio::-webkit-media-controls-panel {
+        background-color: #EAF0FA;
+        border-radius: 48px;
+
+    }
+
+    &__audio:focus-visible {
+        outline: none;
+    }
+
+    &__audio::-webkit-media-controls-play-button {
+        background-color: #fff;
+        border-radius: 24px;
+    }
+
+}
+
+.active-calls-filter {
+    color: rgba(0, 44, 251, 1)
 }
 
 .arrow-active {
